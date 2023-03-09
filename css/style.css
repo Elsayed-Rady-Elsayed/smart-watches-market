@@ -1,0 +1,489 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+:root {
+  --grey-degree: #999999;
+  --landing-page: #3b4a6b;
+  --btn-color: #e6c511;
+  --card-color: #faf9fa;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1.2rem 2.5rem;
+}
+header .logo {
+  font-size: 1.6rem;
+}
+header .nav ul li a {
+  font-size: 0.9rem;
+  margin-right: 2rem;
+}
+header .features i {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+header .menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+header .menu span {
+  background-color: black;
+  height: 0.29rem;
+  width: 1.7rem;
+  margin-bottom: 0.28rem;
+  border-radius: 10px;
+}
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background-color: white;
+}
+.sidebar ul {
+  display: flex;
+  flex-flow: column wrap;
+}
+.sidebar ul li {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: var(--grey-degree);
+}
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 0 1rem 0 0;
+  margin-left: 2.2rem;
+  background-color: var(--landing-page);
+  color: white;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 0px 0px 0px 150px;
+  position: relative;
+}
+.landing-content h3 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.landing-content p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+button {
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding: 0.9rem 3rem;
+  background-color: var(--btn-color);
+  transition: 0.3s;
+}
+button:hover {
+  transform: translateY(-0.3rem);
+}
+.landing img {
+  max-width: 50%;
+}
+.bullets {
+  position: absolute;
+  width: 3rem;
+  height: 2rem;
+  bottom: 10%;
+  left: calc(50% - 1.5rem);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bullets span {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: white;
+}
+.bullets .active {
+  background-color: var(--btn-color);
+  width: 1rem;
+  height: 1rem;
+}
+.latest-watch {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 0;
+  margin-bottom: 5em;
+  position: relative;
+}
+.latest-watch h3,
+.features h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.latest-watch .cards-container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.latest-watch .cards-container .card:first-of-type {
+  grid-column: span 2;
+}
+.latest-watch .cards-container .card {
+  background-color: var(--card-color);
+  border-radius: 15px;
+}
+.latest-watch .cards-container .card .label {
+  background-color: var(--btn-color);
+  color: white;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 15px 0 0 0;
+}
+.latest-watch .cards-container .card img {
+  max-width: 100px;
+}
+.latest-watch .cards-container .card .details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.latest-watch .cards-container .card .details .price span {
+  font-weight: bolder;
+  color: var(--btn-color);
+}
+.latest-watch button {
+  bottom: 0rem;
+  position: absolute;
+}
+.about-us {
+  padding: 5rem 20% 5rem;
+  background-color: var(--landing-page);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.about-us img {
+  width: 30%;
+}
+.about-us .details {
+  display: flex;
+  flex-flow: column wrap;
+  color: white;
+  flex-basis: 50%;
+}
+.about-us .details h3 {
+  font-weight: bolder;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.about-us .details p,
+.features p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.about-us .details button {
+  width: 13rem;
+}
+.features-of-watch {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 5rem 0 0 0;
+  margin-bottom: 5em;
+}
+.features-of-watch .feat-cards {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.features-of-watch .feat-cards .card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0.3rem;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.4px 10px 1px var(--grey-degree);
+  transition: 0.4s;
+}
+.features-of-watch .feat-cards .card:hover {
+  background-color: var(--landing-page);
+  color: white;
+}
+.features-of-watch .feat-cards .card img {
+  width: 30%;
+}
+.features-of-watch .feat-cards .card h4 {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.features-of-watch .feat-cards .card p {
+  font-size: 1rem;
+  line-height: 1.2;
+  width: 90%;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.features-of-watch .feat-cards .card span {
+  font-size: 0.9rem;
+}
+.features-of-watch .feat-cards .card span i {
+  margin-left: 0.2rem;
+}
+.contact-us {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us img {
+  width: 23%;
+  height: 20%;
+}
+.contact-us h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+.contact-us form {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 29%;
+  gap: 1rem;
+}
+.contact-us form input {
+  height: 3rem;
+  padding: 0.3rem;
+  border: 1px solid var(--grey-degree);
+}
+.contact-us form input:last-of-type {
+  height: 7rem;
+}
+.contact-us button {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Testimonial {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+}
+.Testimonial .Testimonial-cards {
+  display: flex;
+  gap: 1rem;
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.Testimonial .card {
+  background-color: var(--landing-page);
+  padding: 1rem;
+  width: 50%;
+  color: white;
+  border-radius: 10px;
+}
+.Testimonial .slider-btns i {
+  background-color: var(--btn-color);
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+}
+.Testimonial .card img {
+  padding: 0.1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--btn-color);
+}
+.Testimonial .card h4 {
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+.Testimonial .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.Testimonial .card i {
+  font-size: 1.2rem;
+}
+.Testimonial .card span {
+  color: var(--btn-color);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--landing-page);
+  color: white;
+  gap: 2rem;
+}
+footer .about {
+  align-self: flex-start;
+}
+footer .about p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+footer .about ul li {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+footer .reach-us {
+  text-align: start;
+  align-self: flex-start;
+}
+footer .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+footer .subscribe form {
+  display: flex;
+  flex-direction: column;
+}
+footer .subscribe form input {
+  background-color: #4d618c;
+  border: none;
+  height: 2rem;
+  color: white;
+  padding: 0.4rem;
+}
+footer ::placeholder {
+  color: white;
+}
+footer .reach-us ul li {
+  display: block;
+}
+@media (max-width: 762px) {
+  header .nav,
+  header .features {
+    display: none;
+  }
+  header .menu {
+    display: flex;
+  }
+  .landing {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    margin-left: 0;
+    border-radius: 0px 0px 0px 250px;
+  }
+  .landing img {
+    max-width: 90%;
+  }
+  .sidebar {
+    align-items: flex-end;
+  }
+  .bullets {
+    position: absolute;
+    width: 6rem;
+    height: 2rem;
+    bottom: 10%;
+    left: 40%;
+  }
+  .latest-watch .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  .latest-watch .cards-container .card img {
+    max-width: 50px;
+  }
+  .latest-watch .cards-container .card .label {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+  .latest-watch .cards-container .details {
+    flex-direction: column;
+  }
+  .about-us {
+    padding: 3rem 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-us img {
+    width: 70%;
+  }
+  .about-us .details button {
+    width: 11rem;
+  }
+  .features-of-watch .feat-cards {
+    margin-right: 1rem;
+  }
+  .contact-us {
+    flex-direction: column-reverse;
+  }
+  .contact-us img {
+    /* display: none; */
+    width: 100%;
+  }
+  .contact-us form {
+    width: 90%;
+  }
+  .Testimonial .Testimonial-cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Testimonial .Testimonial-cards .card {
+    width: 90%;
+    margin-left: 5%;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
